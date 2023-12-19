@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+body {
+  height: 100vh;
+  background-color: #a5cac2;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.piano {
+  background-color: #1d1d1d;
+  border-radius: 20px;
+  padding: 30px 45px;
+}
+.piano__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e0e0e0;
+  letter-spacing: 1px;
+}
+.piano__config {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#volume {
+  accent-color: #e0e0e0;
+}
+#show-keys {
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  background: #4b4b4b;
+  border-radius: 30px;
+}
+#show-keys:checked {
+  background-color: #e0e0e0;
+}
+#show-keys::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background-color: #e0e0e0;
+
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  border: 1px solid black;
+}
+#show-keys:checked:after {
+  left: 55%;
+  background-color: #fff;
+}
+.piano__keys {
+  list-style: none;
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+}
+.piano__keys .key {
+  border: 1px solid #000;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+.piano__keys .key.white {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(#fff 96%, #eee 4%);
+  width: 70px;
+  height: 200px;
+  border-radius: 0 0 10px 10px;
+}
+.piano__keys .key.black {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(354deg, rgba(0, 0, 0, 1) 0%, rgba(62, 62, 62, 1) 100%);
+  width: 50px;
+  height: 140px;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #000;
+  margin: 0 -25px;
+  z-index: 100;
+  color: #fff;
+}
+.piano__keys span {
+  position: absolute;
+  bottom: 14px;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  color: #666;
+}
+.piano__keys span.hidden {
+  opacity: 0;
+}

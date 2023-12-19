@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script defer src="./assets/script/script.js"></script>
+    <title>Virtual Piano</title>
+  </head>
+  <body>
+    <main>
+      <div class="piano">
+        <header class="piano__header">
+          <h2>Virtual PIANO</h2>
+          <div class="piano__config">
+            <label for="volume">Volume</label>
+            <input type="range" name="volume" id="volume" min="0" max="1" value="0.5" step="any" />
+          </div>
+          <div class="piano__config">
+            <label for="show-keys">Show Keys</label>
+            <input type="checkbox" name="show-keys" id="show-keys" checked="true" />
+          </div>
+        </header>
+        <ul class="piano__keys">
+          <li class="key white"><span>a</span></li>
+          <li class="key black"><span>w</span></li>
+          <li class="key white"><span>s</span></li>
+          <li class="key black"><span>e</span></li>
+          <li class="key white"><span>d</span></li>
+          <li class="key white"><span>f</span></li>
+          <li class="key black"><span>t</span></li>
+          <li class="key white"><span>g</span></li>
+          <li class="key black"><span>y</span></li>
+          <li class="key white"><span>h</span></li>
+          <li class="key black"><span>u</span></li>
+          <li class="key white"><span>j</span></li>
+          <li class="key white"><span>k</span></li>
+          <li class="key black"><span>o</span></li>
+          <li class="key white"><span>l</span></li>
+          <li class="key black"><span>p</span></li>
+          <li class="key white"><span>;</span></li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
